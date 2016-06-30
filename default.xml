@@ -18,6 +18,9 @@
   <remote  name="slimsaber"
            fetch="https://github.com/SlimSaber" />
 
+  <remote  name="PA"
+           fetch="https://github.com/AOSPA" />
+
   <default revision="refs/tags/android-6.0.1_r46"
            remote="aosp"
            sync-c="true"
@@ -461,7 +464,7 @@
   <project path="external/webp" name="android_external_webp" remote="slimsaber" revision="mm6.0" groups="pdk,qcom_msm8x26" />
   <project path="external/zlib" name="android_external_zlib" remote="slimsaber" revision="mm6.0" groups="pdk" />
 
-  <project path="frameworks/av" name="frameworks_av" remote="slimsaber" revision="mm6.0" groups="pdk" />
+  <project path="frameworks/av" name="frameworks_av" remote="slimsaber" revision="mm6.0-caf" groups="pdk" />
   <project path="frameworks/base" name="frameworks_base" remote="slimsaber" revision="mm6.0" groups="pdk-cw-fs" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="slimsaber" revision="mm6.0" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="slimsaber" revision="mm6.0" groups="pdk" />
