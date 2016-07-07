@@ -312,7 +312,6 @@
   <project name="android_frameworks_av" path="frameworks/av-caf" remote="omnirom" revision="android-6.0-caf" />
   <project name="android_frameworks_native" path="frameworks/native-caf" remote="omnirom" revision="android-6.0-caf" />
   <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="omnirom" revision="android-6.0" />
-  <project name="device_qcom_common" path="device/qcom/common" remote="ProjM" revision="mm6.0" />
   <project name="vendor_qcom_opensource_display-frameworks" path="vendor/qcom/opensource/display-frameworks" remote="omnirom" revision="android-6.0" />
   <project name="android_device_qcom_caf-sepolicy" path="device/qcom/sepolicy" remote="omnirom" revision="android-6.0" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="omnirom" revision="android-6.0" />
