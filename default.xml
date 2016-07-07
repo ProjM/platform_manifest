@@ -22,6 +22,9 @@
            remote="aosp"
            sync-c="true"
            sync-j="4" />
+           
+  <remote  name="ProjM"
+           fetch="https://github.com/ProjM" />
 
   <project path="build" name="android_build" remote="slimsaber" revision="mm6.0" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -151,7 +154,6 @@
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" />
   <project path="external/libmpeg2" name="platform/external/libmpeg2" groups="pdk" />
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/libnfc-nci" name="android_external_libnfc-nci" groups="pdk" remote="omnirom" revision="android-6.0" />
   <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" />
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" />
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" />
@@ -247,6 +249,9 @@
   <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" />
+ <project name="android_external_libnfc-nci" path="external/libnfc-nci" remote="omnirom" revision="android-6.0" />
+  <project name="android_external_libnfnetlink" path="external/libnfnetlink" remote="omnirom" revision="android-6.0" />
+  <project name="android_external_libnetfilter_conntrack" path="external/libnetfilter_conntrack" remote="omnirom" revision="android-6.0" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -303,11 +308,24 @@
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
+  <project name="android_hardware_ril" path="hardware/ril-caf" remote="omnirom" revision="android-6.0-caf" />
+  <project name="android_frameworks_av" path="frameworks/av-caf" remote="omnirom" revision="android-6.0-caf" />
+  <project name="android_frameworks_native" path="frameworks/native-caf" remote="omnirom" revision="android-6.0-caf" />
+  <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="omnirom" revision="android-6.0" />
+  <project name="device_qcom_common" path="device/qcom/common" remote="ProjM" revision="mm6.0" />
+  <project name="vendor_qcom_opensource_display-frameworks" path="vendor/qcom/opensource/display-frameworks" remote="omnirom" revision="android-6.0" />
+  <project name="android_device_qcom_caf-sepolicy" path="device/qcom/sepolicy" remote="omnirom" revision="android-6.0" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="omnirom" revision="android-6.0" />
+  <project name="android_hardware_qcom_audio-caf-msm8992" path="hardware/qcom/audio-caf-msm8992" remote="omnirom" revision="android-6.0" />
+  <project name="maxwen/android_hardware_qcom_audio-caf-msm8996" path="hardware/qcom/audio-caf-msm8996" remote="github" revision="android-6.0" /> 
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="omnirom" revision="android-6.0" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="omnirom" revision="android-6.0" />
+<project name="android_hardware_qcom_display-caf-msm8992" path="hardware/qcom/display-caf-msm8992" remote="omnirom" revision="android-6.0" />
+<project name="maxwen/android_hardware_qcom_display-caf-msm8996" path="hardware/qcom/display-caf-msm8996" remote="github" revision="android-6.0" />
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="omnirom" revision="android-6.0" groups="qcom" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="omnirom" revision="android-6.0" />
+  <project name="android_hardware_qcom_media-caf-msm8992" path="hardware/qcom/media-caf-msm8992" remote="omnirom" revision="android-6.0" />
+  <project name="maxwen/android_hardware_qcom_media-caf-msm8996" path="hardware/qcom/media-caf-msm8996" remote="github" revision="android-6.0" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994" />
   <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" groups="qcom_msm8x26" />
@@ -438,15 +456,12 @@
   <project path="packages/apps/MonthCalendarWidget" name="android_packages_apps_MonthCalendarWidget" remote="omnirom" revision="android-6.0" />
 
   <!-- SlimSaber -->
-  <project path="android" name="platform_manifest" remote="slimsaber" revision="mm6.0" />
+  <project path="android" name="platform_manifest" remote="ProjM" revision="mm6.0" />
   <project path="art" name="android_art" remote="slimsaber" revision="mm6.0" groups="pdk" />
   <project path="bionic" name="android_bionic" remote="slimsaber" revision="mm6.0" groups="pdk" />
   <project path="bootable/recovery" name="bootable_recovery" remote="slimsaber" revision="mm6.0" groups="pdk-cw-fs"/>
   <project path="dalvik" name="android_dalvik" remote="slimsaber" revision="mm6.0" groups="pdk-cw-fs,pdk-fs" />
 
-  <project path="external/ant-wireless/ant_native" name="CyanogenMod/android_external_ant-wireless_ant_native" remote="github" revision="cm-13.0" />
-  <project path="external/ant-wireless/ant_service" name="CyanogenMod/android_external_ant-wireless_ant_service" remote="github" revision="cm-13.0" />
-  <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github" revision="cm-13.0" />
   <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" remote="github" revision="cm-13.0" groups="pdk" />
   <project path="external/exfat" name="CyanogenMod/android_external_exfat" remote="github" revision="cm-13.0" />
   <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" remote="github" revision="cm-13.0" groups="pdk" />
@@ -463,7 +478,7 @@
   <project path="external/zlib" name="android_external_zlib" remote="slimsaber" revision="mm6.0" groups="pdk" />
 
   <project path="frameworks/av" name="frameworks_av" remote="slimsaber" revision="mm6.0" groups="pdk" />
-  <project path="frameworks/base" name="frameworks_base" remote="slimsaber" revision="mm6.0" groups="pdk-cw-fs" />
+  <project path="frameworks/base" name="frameworks_base" remote="ProjM" revision="mm6.0" groups="pdk-cw-fs" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="slimsaber" revision="mm6.0" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="slimsaber" revision="mm6.0" groups="pdk" />
   <project path="frameworks/opt/slim" name="frameworks_opt_slim" remote="slimsaber" revision="mm6.0" />
@@ -495,10 +510,10 @@
 
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="slimsaber" revision="mm6.0" />
 
-  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="slimsaber" revision="mm6.0" groups="pdk-cw-fs" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="ProjM" revision="mm6.0" groups="pdk-cw-fs" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="slimsaber" revision="mm6.0" />
 
-  <project path="system/core" name="android_system_core" remote="slimsaber" revision="mm6.0" groups="pdk" />
+  <project path="system/core" name="android_system_core" remote="ProjM" revision="mm6.0" groups="pdk" />
   <project path="system/extras" name="android_system_extras" remote="slimsaber" revision="mm6.0" groups="pdk" />
   <project path="system/vold" name="android_system_vold" remote="slimsaber" revision="mm6.0" />
 
